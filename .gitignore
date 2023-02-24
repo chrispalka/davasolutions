@@ -1,0 +1,18 @@
+node_modules
+.env
+main.css
+main.dev.js
+
+# binaries
+bin/
+dist/
+public/*
+!_redirects
+lib/
+
+# editors
+*.swp
+.idea/
+.vs/
+.vscode/
+.DS_Store
