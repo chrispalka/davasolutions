@@ -5,7 +5,7 @@ import Logo from '../assets/images/Dava.png';
 import { faBars, faXmark, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(false);
 
   const toggleShowNav = () => {
     setShowNav(!showNav);

@@ -1,5 +1,6 @@
 html {
   height: -webkit-fill-available;
+  scroll-behavior: smooth;
 }
 
 input {
@@ -13,14 +14,16 @@ body {
   left: 0;
   margin: 0;
   padding: 0;
-  background-color: #FFFFFF;
-  font-family: Gotham, arial;
+  background-color: #ffffff;
+  font-family: arial;
   font-weight: 100;
   font-size: 1em;
   line-height: 1.5;
   color: #fff;
-  overflow-y: hidden;
+  margin: 0px;
+  width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
-  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
   min-height: -webkit-fill-available;
 }
