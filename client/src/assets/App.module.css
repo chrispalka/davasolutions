@@ -5,7 +5,28 @@
   min-height: 100vh;
 }
 
+.sectionWrapper {
+  opacity: 100;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.sectionWrapperFadeIn {
+  opacity: 0;
+}
+
 .logoSection {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.contactSection {
+  border: 2px solid red;
   min-height: 100vh;
   height: 100vh;
   display: flex;
@@ -28,7 +49,17 @@
 }
 
 .logoContainer {
-  margin-top: 6.25rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 4.25rem;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  transition: all ease 1s;
+  opacity: 100;
+}
+
+.logoContainerFadeIn {
+  opacity: 0;
 }
 
 .logo {

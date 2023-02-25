@@ -31,10 +31,18 @@ const Navbar = () => {
           <img src={Logo} className={styles.logo} alt='' />
         </div>
         <div className={styles.linkWrapper}>
-          <div>Home</div>
+          <div>
+            <a href='#home' onClick={toggleShowNav}>
+              Home
+            </a>
+          </div>
           <div>About</div>
           <div>Products</div>
-          <div>Contact</div>
+          <div>
+            <a href='#contact' onClick={toggleShowNav}>
+              Contact
+            </a>
+          </div>
         </div>
       </div>
     </>
