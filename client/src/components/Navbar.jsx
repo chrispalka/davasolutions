@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from '../assets/Navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Logo from '../assets/images/Dava.png';
 import { faBars, faXmark, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Logo from '../assets/images/Dava.png';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);

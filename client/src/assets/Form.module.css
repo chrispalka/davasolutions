@@ -29,33 +29,45 @@
 
 .inputContainer {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .inputContainer input:focus {
   outline: none !important;
-  border: 1px solid red;
+  border: 1px solid black;
   box-shadow: 0 0 5px #719ece;
 }
 
 .inputContainer textarea:focus {
   outline: none !important;
-  border: 1px solid red;
+  border: 1px solid black;
   box-shadow: 0 0 5px #719ece;
+}
+
+.telContainer {
+  padding-bottom: 1.5rem;
 }
 
 .styledForm {
   width: 100%;
 }
 
+.icon {
+  color: rgb(20, 122, 20);
+  font-size: 200px;;
+}
+
 .button {
   all: unset;
   cursor: pointer;
   padding: 0.4rem;
+  width: 60px;
   font-weight: 700;
   border-radius: 5px;
   background-color: black;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
   -webkit-transition: all ease 1s;
   -moz-transition: all ease 1s;
   transition: all ease 1s;
@@ -71,4 +83,5 @@
   font-size: 0.7em;
   color: red;
   margin: 0;
+  height: 1.5rem;
 }
