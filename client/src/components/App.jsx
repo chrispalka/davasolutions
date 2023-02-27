@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from '../assets/App.module.css';
 import DavaGIF from '../assets/images/Dava.GIF';
 import { Navbar, Form, Carousel } from '../layout/index';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const App = () => {
   const [isSpinnerLoading, setIsSpinnerLoading] = useState(true);

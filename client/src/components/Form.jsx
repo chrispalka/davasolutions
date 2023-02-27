@@ -17,7 +17,6 @@ const Form = () => {
     register,
     reset,
     handleSubmit,
-    formState,
     formState: { errors },
     formState: { isSubmitSuccessful },
   } = useForm();
