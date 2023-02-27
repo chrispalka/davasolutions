@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 import styles from '../assets/Form.module.css';
-import Button from './Button';
+import { Button } from '../layout/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -33,26 +33,21 @@ const Form = () => {
         if (response.data === 'success') {
           setIsLoading(false);
           setIsComplete(true);
+          reset({
+            phone: '',
+            firstName: '',
+            lastName: '',
+            email: '',
+            message: '',
+          });
           setTimeout(() => {
             setIsComplete(false);
-          }, 2000);
+          }, 3000);
         }
       })
       .catch((err) => console.log(err));
     console.log(data);
   };
-
-  useEffect(() => {
-    if (formState.isSubmitSuccessful) {
-      reset({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: '',
-      });
-    }
-  }, [formState, data, reset]);
 
   return (
     <div className={styles.formContainer}>
@@ -72,6 +67,7 @@ const Form = () => {
                   required: 'This field is required!',
                 })}
                 placeholder='First Name'
+                disabled={isLoading}
               />
               <p className={styles.error}>{errors.firstName?.message}</p>
             </div>
@@ -83,6 +79,7 @@ const Form = () => {
                   required: 'This field is required!',
                 })}
                 placeholder='Last Name'
+                disabled={isLoading}
               />
               <p className={styles.error}>{errors.lastName?.message}</p>
             </div>
@@ -98,6 +95,7 @@ const Form = () => {
                 })}
                 type='email'
                 placeholder='Email'
+                disabled={isLoading}
               />
               <p className={styles.error}>{errors.email?.message}</p>
             </div>
@@ -107,6 +105,7 @@ const Form = () => {
               <Controller
                 control={control}
                 name='phone'
+                defaultValue=''
                 render={({ field: { onChange, onBlur, ref } }) => (
                   <InputMask
                     mask='(999) 999-9999'
@@ -115,6 +114,7 @@ const Form = () => {
                     inputRef={ref}
                     inputMode='numeric'
                     placeholder='(555) 555-5555'
+                    disabled={isLoading}
                     className={styles.input}
                   />
                 )}
@@ -129,6 +129,7 @@ const Form = () => {
                 {...register('message')}
                 rows='8'
                 placeholder='Questions, comments, concerns?'
+                disabled={isLoading}
               />
             </div>
             <div className={styles.inputContainer}>
@@ -147,14 +148,14 @@ const Form = () => {
           </form>
         </>
       ) : (
-        <>
+        <div className={styles.thankYouContainer}>
           <h1 className={styles.heading}>Thank you!</h1>
           <FontAwesomeIcon
             className={styles.icon}
             icon={faCheckCircle}
             size='lg'
           />
-        </>
+        </div>
       )}
     </div>
   );

@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { CSSTransition } from 'react-transition-group';
 import styles from '../assets/App.module.css';
-import Logo from '../assets/images/Dava.png';
-import Spinner from '../assets/images/Dava.GIF';
-import Navbar from './NavBar';
-import Form from './Form';
+import DavaGIF from '../assets/images/Dava.GIF';
+import { Navbar, Form, Carousel } from '../layout/index';
 
 const App = () => {
   const [isSpinnerLoading, setIsSpinnerLoading] = useState(true);
@@ -30,21 +27,24 @@ const App = () => {
               : styles.logoContainer
           }
         >
-          <img src={Spinner} className={styles.logo} alt='' />
+          <img src={DavaGIF} className={styles.logo} alt='' />
         </div>
         <div
           className={
             isLoading
-              ? [styles.sectionWrapper, styles.sectionWrapperFadeInd].join(' ')
+              ? [styles.sectionWrapper, styles.sectionWrapperFadeIn].join(' ')
               : styles.sectionWrapper
           }
         >
-          {/* <section id='home' className={styles.logoSection}>
+          <section id='home' className={styles.logoSection}>
             <div className={styles.logoSubContainer}>
               We strive to provide you the best customer service, the healthiest
               snacks, at an affordable price!
             </div>
-          </section> */}
+          </section>
+          <section id='carousel' className={styles.carouselSection}>
+            <Carousel />
+          </section>
           <section id='contact' className={styles.contactSection}>
             <Form />
           </section>

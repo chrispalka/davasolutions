@@ -40,7 +40,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.2",
     "react-input-mask": "^2.0.4",
-    "react-transition-group": "^4.4.5"
+    "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",

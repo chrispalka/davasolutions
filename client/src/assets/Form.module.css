@@ -22,9 +22,9 @@
 
 .input {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   padding: 0.3rem;
-  border: 1px solid rgb(162, 160, 160);
+  border: 0.0625rem solid rgb(162, 160, 160);
 }
 
 .inputContainer {
@@ -34,14 +34,14 @@
 
 .inputContainer input:focus {
   outline: none !important;
-  border: 1px solid black;
-  box-shadow: 0 0 5px #719ece;
+  border: 0.0625rem solid black;
+  box-shadow: 0 0 0.3125rem #719ece;
 }
 
 .inputContainer textarea:focus {
   outline: none !important;
-  border: 1px solid black;
-  box-shadow: 0 0 5px #719ece;
+  border: 0.0625rem solid black;
+  box-shadow: 0 0 0.3125rem #719ece;
 }
 
 .telContainer {
@@ -53,17 +53,75 @@
 }
 
 .icon {
+  margin-top: 1.25rem;
   color: rgb(20, 122, 20);
-  font-size: 200px;;
+  font-size: 12.5rem;
+}
+
+.thankYouContainer {
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .button {
   all: unset;
   cursor: pointer;
   padding: 0.4rem;
-  width: 60px;
+  width: 3.75rem;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background-color: black;
   color: #ffffff;
   display: flex;
@@ -74,7 +132,7 @@
 }
 
 .button:hover {
-  border: 1px solid rgb(162, 160, 160);
+  border: 0.0625rem solid rgb(162, 160, 160);
   background-color: #ffffff;
   color: black;
 }
