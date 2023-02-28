@@ -20,7 +20,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <main className={styles.mainWrapper}>
+      <main id='home' className={styles.mainWrapper}>
         <div
           className={
             isSpinnerLoading
@@ -37,13 +37,13 @@ const App = () => {
               : styles.sectionWrapper
           }
         >
-          <section id='home' className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoSubContainer}>
               We strive to provide you the best customer service, the healthiest
               snacks, at an affordable price!
             </div>
           </section>
-          <section id='carousel' className={styles.carouselSection}>
+          <section id='products' className={styles.carouselSection}>
             <Carousel />
           </section>
           <section id='contact' className={styles.contactSection}>
