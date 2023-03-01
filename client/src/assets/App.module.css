@@ -81,3 +81,42 @@
 .logo {
   height: 12.5rem;
 }
+
+/* TABLET */
+
+@media (min-width: 48rem) and (max-width: 64rem) {
+  .logoContainer {
+    padding-top: 15rem;
+  }
+
+  .contactSection {
+    padding-top: 10.25rem;
+    border: 2px solid yellow;
+  }
+}
+
+/* LAPTOP DESKTOP */
+
+@media (min-width: 64.0625rem) and (max-width: 80rem) {
+  .logoContainer {
+    padding-top: 15rem;
+  }
+
+  .contactSection {
+    padding-top: 10.25rem;
+    border: 2px solid yellow;
+  }
+}
+
+/* LARGE SCREENS */
+
+@media (min-width: 80.0625rem) {
+  .logoContainer {
+    padding-top: 15rem;
+  }
+
+  .contactSection {
+    padding-top: 10.25rem;
+    border: 2px solid yellow;
+  }
+}

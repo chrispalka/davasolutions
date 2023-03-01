@@ -7,7 +7,7 @@ import vendingGlobe from '../assets/images/vending-globe.jpeg';
 
 export default () => (
   <Carousel
-    // autoPlay
+    autoPlay
     showThumbs={false}
     showStatus={false}
     showArrows={false}
