@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../assets/App.module.css';
 import DavaGIF from '../assets/images/Dava.GIF';
-import { Navbar, Form, Carousel } from '../layout/index';
+import { Navbar, Form, Carousel, useScroll } from '../layout';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const App = () => {
   const [isSpinnerLoading, setIsSpinnerLoading] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const [yOffset, setYOffset] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+  const { y, x, scrollDirection } = useScroll();
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,9 +20,22 @@ const App = () => {
     }, 3000);
   }, [isSpinnerLoading, isLoading]);
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+
+  const handleScroll = () => {
+    const currentYOffset = window.pageYOffset;
+    const visible = yOffset > currentYOffset;
+
+    setYOffset(currentYOffset);
+    setVisible(visible);
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar visible={visible} />
       <main id='home' className={styles.mainWrapper}>
         <div
           className={

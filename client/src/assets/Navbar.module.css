@@ -57,9 +57,8 @@
 }
 
 .logoContainer {
-  position: absolute;
-  top: 10%;
-  left: 25%;
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
@@ -68,7 +67,7 @@
 
 /* TABLET */
 
-@media (min-width: 48rem) and (max-width: 64rem){
+@media (min-width: 48rem) and (max-width: 64rem) {
   .mobile_btn {
     display: none;
   }
@@ -126,8 +125,24 @@
     display: none;
   }
   .navContainer {
-    height: 7rem;
+    background-color: black;
+    height: 6rem;
     left: 0;
+    transition: top 0.6s;
+  }
+
+  .navbarHidden {
+    top: -6rem;
+  }
+  .links a {
+    color: gray;
+  }
+
+  .links a:hover {
+    color: #ffffff;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
   }
 
   .logoContainer {

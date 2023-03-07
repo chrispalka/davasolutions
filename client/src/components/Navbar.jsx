@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../assets/Navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useScrollLock } from '../layout';
+import { debounce } from '../helpers/debounce';
 import Logo from '../assets/images/Dava.png';
 
-const Navbar = () => {
+const Navbar = ({ visible }) => {
   const [showNav, setShowNav] = useState(false);
   const { lockScroll, unlockScroll } = useScrollLock();
 
   const toggleShowNav = () => {
     setShowNav(!showNav);
-    if (showNav) {
-      unlockScroll();
-    } else {
-      lockScroll();
-    }
+    // if (showNav) {
+    //   unlockScroll();
+    // } else {
+    //   lockScroll();
+    // }
   };
 
   return (
@@ -31,25 +32,31 @@ const Navbar = () => {
         className={
           showNav
             ? [styles.navContainer, styles.navActive].join(' ')
-            : styles.navContainer
+            : visible
+            ? styles.navContainer
+            : [styles.navbarHidden, styles.navContainer].join(' ')
         }
       >
-        <div className={styles.logoContainer}>
-          <img src={Logo} className={styles.logo} alt='' />
-        </div>
         <div className={styles.linkWrapper}>
-          <div>
+          <div className={styles.logoContainer}>
+            <img src={Logo} className={styles.logo} alt='' />
+          </div>
+          <div className={styles.links}>
             <a href='#home' onClick={toggleShowNav}>
               Home
             </a>
           </div>
-          <div>About</div>
-          <div>
+          <div className={styles.links}>
+            <a href='#about' onClick={toggleShowNav}>
+              About
+            </a>
+          </div>
+          <div className={styles.links}>
             <a href='#products' onClick={toggleShowNav}>
               Products
             </a>
           </div>
-          <div>
+          <div className={styles.links}>
             <a href='#contact' onClick={toggleShowNav}>
               Contact
             </a>
