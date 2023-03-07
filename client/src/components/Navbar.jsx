@@ -3,24 +3,23 @@ import styles from '../assets/Navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useScrollLock } from '../layout';
-import { debounce } from '../helpers/debounce';
 import Logo from '../assets/images/Dava.png';
 
-const Navbar = ({ visible }) => {
+const Navbar = ({ scrollDirection, top, isLoading }) => {
   const [showNav, setShowNav] = useState(false);
   const { lockScroll, unlockScroll } = useScrollLock();
 
   const toggleShowNav = () => {
     setShowNav(!showNav);
-    // if (showNav) {
-    //   unlockScroll();
-    // } else {
-    //   lockScroll();
-    // }
+    if (showNav) {
+      unlockScroll();
+    } else {
+      lockScroll();
+    }
   };
 
   return (
-    <>
+    <div className={isLoading ? styles.navFadeIn : styles.nav}>
       <div className={styles.mobile_btn} id='nav-click' onClick={toggleShowNav}>
         {showNav ? (
           <FontAwesomeIcon className={styles.icon} icon={faXmark} size='lg' />
@@ -32,38 +31,55 @@ const Navbar = ({ visible }) => {
         className={
           showNav
             ? [styles.navContainer, styles.navActive].join(' ')
-            : visible
-            ? styles.navContainer
-            : [styles.navbarHidden, styles.navContainer].join(' ')
+            : top
+            ? [styles.navContainer, styles.navContainerTop].join(' ')
+            : styles.navContainer
         }
+        style={!scrollDirection ? { top: '-5rem' } : { top: 0 }}
       >
-        <div className={styles.linkWrapper}>
+        <div className={styles.navWrapper}>
           <div className={styles.logoContainer}>
             <img src={Logo} className={styles.logo} alt='' />
           </div>
-          <div className={styles.links}>
-            <a href='#home' onClick={toggleShowNav}>
-              Home
-            </a>
+          <div className={styles.linkMobile}>
+            <div className={styles.links}>
+              <a href='#home' onClick={toggleShowNav}>
+                Home
+              </a>
+            </div>
+            <div className={styles.links}>
+              <a href='#about' onClick={toggleShowNav}>
+                About
+              </a>
+            </div>
+            <div className={styles.links}>
+              <a href='#products' onClick={toggleShowNav}>
+                Products
+              </a>
+            </div>
+            <div className={styles.links}>
+              <a href='#contact' onClick={toggleShowNav}>
+                Contact
+              </a>
+            </div>
           </div>
-          <div className={styles.links}>
-            <a href='#about' onClick={toggleShowNav}>
-              About
-            </a>
-          </div>
-          <div className={styles.links}>
-            <a href='#products' onClick={toggleShowNav}>
-              Products
-            </a>
-          </div>
-          <div className={styles.links}>
-            <a href='#contact' onClick={toggleShowNav}>
-              Contact
-            </a>
+          <div className={styles.linkDesktop}>
+            <div className={styles.links}>
+              <a href='#home'>Home</a>
+            </div>
+            <div className={styles.links}>
+              <a href='#about'>About</a>
+            </div>
+            <div className={styles.links}>
+              <a href='#products'>Products</a>
+            </div>
+            <div className={styles.links}>
+              <a href='#contact'>Contact</a>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

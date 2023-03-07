@@ -1,5 +1,6 @@
 .navContainer {
   position: fixed;
+  display: flex;
   width: 100%;
   left: -100%;
   top: 0;
@@ -29,7 +30,12 @@
   color: black;
 }
 
-.linkWrapper {
+.linkDesktop {
+  display: none;
+}
+
+.linkMobile {
+  align-items: center;
   margin: auto;
   display: flex;
   height: 100%;
@@ -38,7 +44,7 @@
   justify-content: center;
 }
 
-.linkWrapper div {
+.linkMobile div {
   color: black;
   padding: 1rem;
   -webkit-transition: all ease 0.5s;
@@ -46,14 +52,22 @@
   transition: all ease 0.5s;
 }
 
-.linkWrapper div:hover {
+.linkMobile div:hover {
   cursor: pointer;
   color: red;
 }
 
-.linkWrapper a {
+.linkMobile a {
   text-decoration: none;
   color: black;
+}
+
+.navWrapper {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .logoContainer {
@@ -72,49 +86,143 @@
     display: none;
   }
   .navContainer {
-    height: 7rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    height: 4rem;
     left: 0;
+    transition: top 0.2s;
+    box-shadow: 0 10px 30px -10px black;
+    backdrop-filter: blur(10px);
   }
 
+  .navFadeIn {
+    opacity: 0;
+  }
+
+  .nav {
+    opacity: 100;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    transition: all ease 1s;
+  }
+  .navContainerTop {
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+
+  .navContainerTop .links a {
+    color: black;
+  }
+
+  .navContainerTop .links a:hover {
+    color: gray;
+  }
+
+  .links a {
+    color: gray;
+    -webkit-transition: all ease-in-out 0.5s;
+    -moz-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .links a:hover {
+    color: #ffffff;
+  }
   .logoContainer {
     display: none;
   }
 
-  .linkWrapper {
+  .linkDesktop {
     flex-direction: row;
     width: 100%;
   }
 
-  .linkWrapper div {
-    padding: 0 7rem;
+  .linkDesktop div {
+    padding: 0 4rem;
+  }
+
+  .linkMobile {
+    display: none;
+  }
+  .linkDesktop {
+    display: flex;
+  }
+
+  .linkDesktop a {
+    text-decoration: none;
   }
 }
 
 /* LAPTOP DESKTOP */
 
 @media (min-width: 64.0625rem) and (max-width: 80rem) {
-  body {
-    border: 2px solid green;
-  }
   .mobile_btn {
     display: none;
   }
   .navContainer {
-    height: 7rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    height: 4rem;
     left: 0;
+    transition: top 0.2s;
+    box-shadow: 0 10px 30px -10px black;
+    backdrop-filter: blur(10px);
   }
 
+  .navFadeIn {
+    opacity: 0;
+  }
+
+  .nav {
+    opacity: 100;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    transition: all ease 1s;
+  }
+
+  .navContainerTop {
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+
+  .navContainerTop .links a {
+    color: black;
+  }
+
+  .navContainerTop .links a:hover {
+    color: gray;
+  }
+
+  .links a {
+    color: gray;
+    -webkit-transition: all ease-in-out 0.5s;
+    -moz-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .links a:hover {
+    color: #ffffff;
+  }
   .logoContainer {
     display: none;
   }
 
-  .linkWrapper {
+  .linkDesktop {
     flex-direction: row;
     width: 100%;
   }
 
-  .linkWrapper div {
+  .linkDesktop div {
     padding: 0 7rem;
+  }
+
+  .linkMobile {
+    display: none;
+  }
+  .linkDesktop {
+    display: flex;
+  }
+
+  .linkDesktop a {
+    text-decoration: none;
   }
 }
 
@@ -125,10 +233,37 @@
     display: none;
   }
   .navContainer {
-    background-color: black;
-    height: 6rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    height: 4rem;
     left: 0;
-    transition: top 0.6s;
+    transition: all 0.2s;
+    box-shadow: 0 10px 30px -10px black;
+    backdrop-filter: blur(10px);
+  }
+
+  .navFadeIn {
+    opacity: 0;
+  }
+
+  .nav {
+    opacity: 100;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    transition: all ease 1s;
+  }
+
+  .navContainerTop {
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+
+  .navContainerTop .links a {
+    color: black;
+  }
+
+  .navContainerTop .links a:hover {
+    color: gray;
   }
 
   .navbarHidden {
@@ -136,29 +271,35 @@
   }
   .links a {
     color: gray;
+    -webkit-transition: all ease-in-out 0.5s;
+    -moz-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
   }
-
+  .linkMobile {
+    display: none;
+  }
   .links a:hover {
     color: #ffffff;
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    transition: all ease 0.5s;
   }
 
   .logoContainer {
     display: none;
   }
 
-  .linkWrapper {
+  .linkDesktop {
     flex-direction: row;
     width: 100%;
   }
-
-  .linkWrapper div {
-    padding: 0 7rem;
+  .linkDesktop {
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 
-  body {
-    border: 2px solid rgb(155, 11, 11);
+  .linkDesktop div {
+    padding: 0 7rem;
+  }
+  .linkDesktop a {
+    text-decoration: none;
   }
 }

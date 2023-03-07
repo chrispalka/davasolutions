@@ -1,39 +1,35 @@
 import { useState, useEffect } from 'react';
 
 const useScroll = () => {
-  // storing this to get the scroll direction
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  // the offset of the document.body
-  const [bodyOffset, setBodyOffset] = useState(
-    document.body.getBoundingClientRect()
-  );
-  // the vertical direction
-  const [scrollY, setScrollY] = useState(bodyOffset.top);
-  // the horizontal direction
-  const [scrollX, setScrollX] = useState(bodyOffset.left);
-  // scroll direction would be either up or down
-  const [scrollDirection, setScrollDirection] = useState();
-
-  const listener = (e) => {
-    setBodyOffset(document.body.getBoundingClientRect());
-    setScrollY(-bodyOffset.top);
-    setScrollX(bodyOffset.left);
-    setScrollDirection(lastScrollTop > -bodyOffset.top ? 'down' : 'up');
-    setLastScrollTop(-bodyOffset.top);
-  };
+  const [scrollDirection, setScrollDirection] = useState(true);
+  const [topOfPage, setTopOfPage] = useState(true);
 
   useEffect(() => {
-    window.addEventListener('scroll', listener);
-    return () => {
-      window.removeEventListener('scroll', listener);
-    };
-  });
+    let lastScrollY = window.pageYOffset;
 
-  return {
-    scrollY,
-    scrollX,
-    scrollDirection,
-  };
+    const updateScrollDirection = () => {
+      const scrollY = window.pageYOffset;
+      const direction = scrollY > lastScrollY ? false : true;
+      if (
+        direction !== scrollDirection &&
+        (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)
+      ) {
+        setScrollDirection(direction);
+      }
+      if (window.pageYOffset === 0) {
+        setTopOfPage(true);
+      } else {
+        setTopOfPage(false);
+      }
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+    };
+    window.addEventListener('scroll', updateScrollDirection); // add event listener
+    return () => {
+      window.removeEventListener('scroll', updateScrollDirection); // clean up
+    };
+  }, [scrollDirection, topOfPage]);
+
+  return { scrollDirection, topOfPage };
 };
 
 export default useScroll;
