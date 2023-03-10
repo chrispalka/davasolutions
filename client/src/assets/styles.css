@@ -30,4 +30,5 @@ body {
 
 .carousel .control-dots .dot {
   background: black !important;
+  /* margin-top: 3rem; */
 }

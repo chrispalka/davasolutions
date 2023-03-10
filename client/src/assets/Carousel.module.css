@@ -1,7 +1,30 @@
-.container {
-  /* border: 2px solid orange; */
+.wrapper {
+  width: 100%;
 }
 .info {
   color: black;
-  padding: 2rem 0.5rem;
+  padding: 0.5rem 0.5rem 3rem 0.5rem;
+}
+
+.icon {
+  color: black;
+  font-size: 10vw;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  color: black;
+  margin: 0;
+}
+
+.cookie {
+  color: #9d7e67;
+}
+
+.leaf {
+  color: #2d5a27;
+}
+
+.coffee {
+  color: #6f4e37;
 }

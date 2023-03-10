@@ -11,7 +11,6 @@ const axios = require('axios');
 const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
-  const [data, setData] = useState(null);
   const {
     control,
     register,
@@ -22,7 +21,6 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    setData(data);
     setIsLoading(true);
     axios
       .post('formSubmit', {
