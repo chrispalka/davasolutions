@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 import styles from '../assets/Form.module.css';
-import { Button } from '../layout/index';
+import { Button } from '../layout/index.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 

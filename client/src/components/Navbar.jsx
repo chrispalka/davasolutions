@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from '../assets/Navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { useScrollLock } from '../layout';
+import { useScrollLock } from '../layout/index.js';
 import Logo from '../assets/images/Dava.png';
 
 const Navbar = ({ scrollDirection, top, isLoading }) => {

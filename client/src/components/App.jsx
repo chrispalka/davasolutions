@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../assets/App.module.css';
 import DavaGIF from '../assets/images/Dava.GIF';
-import { Navbar, Form, Products, useScroll } from '../layout';
+import { Navbar, Form, Products, useScroll } from '../layout/index.js';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const App = () => {

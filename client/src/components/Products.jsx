@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { Product } from '../layout';
+import { Product } from '../layout/index.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faMugHot,
