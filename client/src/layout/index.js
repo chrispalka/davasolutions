@@ -1,4 +1,4 @@
-import Navbar from '../components/NavBar';
+import Navbar from '../components/Navbar';
 import Form from '../components/Form';
 import Button from '../components/Button';
 import Product from '../components/Product';
