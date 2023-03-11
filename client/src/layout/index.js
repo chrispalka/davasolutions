@@ -1,7 +1,8 @@
 import Navbar from '../components/NavBar';
 import Form from '../components/Form';
 import Button from '../components/Button';
-import Carousel from '../components/Carousel';
+import Product from '../components/Product';
+import Products from '../components/Products';
 import useScrollLock from '../hooks/useScrollLock';
 import useScroll from '../hooks/useScroll';
 
@@ -9,7 +10,8 @@ export {
   Navbar,
   Form,
   Button,
-  Carousel,
+  Products,
+  Product,
   useScrollLock,
   useScroll
 };

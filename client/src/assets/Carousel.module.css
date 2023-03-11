@@ -28,3 +28,44 @@
 .coffee {
   color: #6f4e37;
 }
+
+.nonCarouselWrapper {
+  display: none;
+}
+
+@media (min-width: 48rem) and (max-width: 64rem) {
+  .carouselWrapper {
+    display: none;
+  }
+  .nonCarouselWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+/* LAPTOP DESKTOP */
+
+@media (min-width: 64.0625rem) and (max-width: 80rem) {
+  .carouselWrapper {
+    display: none;
+  }
+  .nonCarouselWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+/* LARGE SCREENS */
+
+@media (min-width: 80.0625rem) {
+  .carouselWrapper {
+    display: none;
+  }
+  .nonCarouselWrapper {
+    display: flex;
+  }
+}
