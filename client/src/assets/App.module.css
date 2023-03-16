@@ -29,6 +29,37 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 4.25rem;
+  margin-bottom: 3.125rem;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  transition: all ease 1s;
+  opacity: 100;
+}
+
+.logoSubContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5625rem;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 400px;
+}
+
+.logoContainerFadeIn {
+  opacity: 0;
+}
+
+.logo {
+  height: 12.5rem;
+}
+
 .carouselSection {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
@@ -54,7 +85,17 @@
   justify-content: flex-start;
 }
 
-.logoSubContainer {
+.listSection {
+  /* border: 2px solid yellow; */
+  display: flex;
+  background-color: black;
+  height: 43.75rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.listSubContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,25 +104,6 @@
   color: white;
   width: 100%;
   height: 400px;
-}
-
-.logoContainer {
-  display: flex;
-  justify-content: center;
-  padding-top: 4.25rem;
-  margin-bottom: 3.125rem;
-  -webkit-transition: all ease 1s;
-  -moz-transition: all ease 1s;
-  transition: all ease 1s;
-  opacity: 100;
-}
-
-.logoContainerFadeIn {
-  opacity: 0;
-}
-
-.logo {
-  height: 12.5rem;
 }
 
 /* TABLET */
