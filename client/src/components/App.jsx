@@ -51,9 +51,16 @@ const App = () => {
           <section id='products' className={styles.carouselSection}>
             <Products />
           </section>
+          <section className={styles.logoSection}>
+            <div className={styles.logoSubContainer}>
+              We strive to provide you the best customer service, the healthiest
+              snacks, at an affordable price!
+            </div>
+          </section>
           <section id='contact' className={styles.contactSection}>
             <Form />
           </section>
+          <footer className={styles.footerSection}>footer text</footer>
         </div>
       </main>
     </>

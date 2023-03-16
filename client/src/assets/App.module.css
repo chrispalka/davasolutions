@@ -1,7 +1,6 @@
 .mainWrapper {
-  margin: 0px auto;
   width: 100%;
-  max-width: 1600px;
+  max-width: 100%;
   min-height: 100vh;
 }
 
@@ -12,6 +11,11 @@
   transition: all ease 1s;
 }
 
+.footerSection {
+  background-color: #ffffff;
+  height: 700px;
+}
+
 .sectionWrapperFadeIn {
   opacity: 0;
 }
@@ -19,12 +23,15 @@
 .logoSection {
   /* border: 2px solid yellow; */
   display: flex;
+  background-color: black;
+
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
 .carouselSection {
   padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,10 +44,10 @@
 }
 
 .contactSection {
-  padding-top: 4.25rem;
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
   /* border: 2px solid red; */
-  min-height: 100vh;
-  height: 100vh;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,14 +55,12 @@
 }
 
 .logoSubContainer {
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 1.5625rem;
-  background-color: black;
   text-align: center;
-  color: #ffffff;
+  color: white;
   width: 100%;
   height: 400px;
 }
@@ -64,6 +69,7 @@
   display: flex;
   justify-content: center;
   padding-top: 4.25rem;
+  margin-bottom: 3.125rem;
   -webkit-transition: all ease 1s;
   -moz-transition: all ease 1s;
   transition: all ease 1s;
@@ -86,13 +92,11 @@
   }
 
   .contactSection {
-    padding-top: 10.25rem;
+    padding-top: 7.25rem;
   }
   .logoSection {
-
   }
   .carouselSection {
-
   }
 }
 
@@ -104,13 +108,12 @@
   }
 
   .contactSection {
-    padding-top: 10.25rem;
+    padding-top: 7.25rem;
   }
 
   .carouselSection {
   }
   .logoSection {
-
   }
 }
 
@@ -122,11 +125,10 @@
   }
 
   .contactSection {
-    padding-top: 10.25rem;
+    padding-top: 7.25rem;
   }
   .carouselSection {
   }
   .logoSection {
-
   }
 }
