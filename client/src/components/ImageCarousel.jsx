@@ -17,9 +17,9 @@ const ImageCarousel = () => (
       <div className={styles.container}>
         <img className={styles.imageContainer} alt='' src={vendingUpClose} />
       </div>
-      <div className={styles.container}>
+      {/* <div className={styles.container}>
         <img className={styles.imageContainer} alt='' src={cocaCola} />
-      </div>
+      </div> */}
       <div className={styles.container}>
         <img className={styles.imageContainer} alt='' src={vendingPeople} />
       </div>
