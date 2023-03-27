@@ -26,7 +26,7 @@ const Form = () => {
     console.log(api);
     setIsLoading(true);
     axios
-      .post(`${api}/formSubmit`, {
+      .post('https://glistening-marzipan-19940a.netlify.app/.netlify/functions/api/formSubmit', {
         data,
       })
       .then((response) => {
