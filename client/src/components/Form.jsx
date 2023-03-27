@@ -23,7 +23,6 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(api);
     setIsLoading(true);
     axios
       .post(`${api}/formSubmit`, {
