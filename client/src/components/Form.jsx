@@ -8,6 +8,8 @@ import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 const axios = require('axios');
 
+const api = process.env.API_DOMAIN;
+
 const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
@@ -21,9 +23,10 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    console.log(api);
     setIsLoading(true);
     axios
-      .post('formSubmit', {
+      .post(`${api}/formSubmit`, {
         data,
       })
       .then((response) => {

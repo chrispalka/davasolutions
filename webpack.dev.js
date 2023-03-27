@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const common = require('./webpack.common');
 const DIST_DIR = path.join(__dirname, 'public');
 
+require('dotenv').config()
 
 module.exports = merge(common, {
   mode: 'development',
@@ -35,7 +36,8 @@ module.exports = merge(common, {
   plugins: [
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify('development'),
-      DOMAIN: JSON.stringify('http://localhost:3000/')
+      DOMAIN: JSON.stringify('http://localhost:3000/'),
+      'process.env.API_DOMAIN': JSON.stringify(process.env.API_DOMAIN)
     })
   ]
 });
