@@ -39,7 +39,22 @@ const App = () => {
               : styles.logoContainer
           }
         >
-          <img src={DavaGIF} className={styles.logo} alt='' />
+          <div>
+            <img src={DavaGIF} className={styles.logo} alt='' />
+          </div>
+          <div>
+            <p
+              className={
+                isLoading
+                  ? [styles.sectionWrapper, styles.sectionWrapperFadeIn].join(
+                      ' '
+                    )
+                  : styles.sectionWrapper
+              }
+            >
+              <a href='tel:6784247208'>678-424-7208</a>6
+            </p>
+          </div>
         </div>
         <div
           className={

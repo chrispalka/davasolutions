@@ -51,7 +51,7 @@ const Form = () => {
     <div className={styles.formContainer}>
       {!isComplete ? (
         <>
-          <h1 className={styles.heading}>Contact Us</h1>
+          <h1 className={styles.heading}>Get in touch!</h1>
           <h2 className={styles.subHeading}>
             Fill out the form below, and we will get back to you as soon as
             possible!
