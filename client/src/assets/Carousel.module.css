@@ -1,5 +1,5 @@
 .wrapper {
-  width: 50%;
+  width: 100%;
 }
 .info {
   color: black;
@@ -33,7 +33,12 @@
   display: none;
 }
 
+/* TABLET */
+
 @media (min-width: 48rem) and (max-width: 64rem) {
+  .wrapper {
+    width: 50%;
+  }
   .carouselWrapper {
     display: none;
   }
@@ -48,6 +53,9 @@
 /* LAPTOP DESKTOP */
 
 @media (min-width: 64.0625rem) and (max-width: 80rem) {
+  .wrapper {
+    width: 50%;
+  }
   .carouselWrapper {
     display: none;
   }
@@ -62,6 +70,9 @@
 /* LARGE SCREENS */
 
 @media (min-width: 80.0625rem) {
+  .wrapper {
+    width: 50%;
+  }
   .carouselWrapper {
     display: none;
   }
