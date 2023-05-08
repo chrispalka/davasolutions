@@ -39,7 +39,7 @@ const Navbar = ({ scrollDirection, top, isLoading }) => {
       >
         <div className={styles.navWrapper}>
           <div className={styles.logoContainer}>
-            <img src={Logo} className={styles.logo} alt='' />
+            <img src={Logo} className={styles.logo} alt='white D dava solutions logo' />
           </div>
           <div className={styles.linkMobile}>
             <div className={styles.links}>

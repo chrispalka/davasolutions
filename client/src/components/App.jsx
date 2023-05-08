@@ -40,7 +40,7 @@ const App = () => {
           }
         >
           <div>
-            <img src={DavaGIF} className={styles.logo} alt='' />
+            <img src={DavaGIF} className={styles.logo} alt='white D dava solutions logo' />
           </div>
           <div>
             <p

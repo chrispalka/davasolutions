@@ -24,7 +24,7 @@ const ImageCarousel = () => (
     >
       {imgArray.map((img, i) => (
         <div key={i} className={styles.container}>
-          <img className={styles.imageContainer} alt='' src={img} />
+          <img className={styles.imageContainer} alt='vending machine machines snacks' src={img} />
         </div>
       ))}
     </Carousel>
