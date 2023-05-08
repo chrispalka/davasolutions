@@ -1,7 +1,7 @@
 {
   "name": "davasolutions",
   "version": "1.0.0",
-  "description": "Dava Solutions",
+  "description": "DAVA Solutions",
 "main": "Index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

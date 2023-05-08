@@ -16,7 +16,7 @@ module.exports = {
       template: './client/index.html',
       filename: 'index.html',
       cache: false,
-      // favicon: './client/src/assets/favicon.ico'
+      favicon: './client/src/assets/images/favicon.ico'
     }),
     new NodePolyfillPlugin(),
     new MiniCssExtractPlugin({
