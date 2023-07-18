@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -16,8 +17,8 @@ module.exports = {
       template: './client/index.html',
       filename: 'index.html',
       cache: false,
-      favicon: './client/src/assets/images/favicon.ico'
     }),
+    new FaviconsWebpackPlugin('./client/src/assets/images/Logo.png'),
     new NodePolyfillPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
