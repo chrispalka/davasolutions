@@ -16,18 +16,52 @@
   left: 0;
 }
 
-.mobile_btn {
+.navFadeIn {
+  opacity: 0;
+}
+
+.nav {
+  opacity: 100;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.fixedMobileNavContainer {
   position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  background-color: #fff;
+  z-index: 9998;
   padding: 1rem;
-  cursor: pointer;
-  z-index: 9999;
+  box-shadow: 0px 18px 57px -5px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0px 18px 57px -5px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 18px 57px -5px rgba(0, 0, 0, 0.14);
+}
+
+.boxShadow {
+  box-shadow: 0px 18px 57px -5px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0px 18px 57px -5px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 18px 57px -5px rgba(0, 0, 0, 0.14);
+}
+
+.mobileNavLogoContainer img {
+  height: 50px;
+  z-index: 9998;
 }
 
 .icon {
   color: black;
+}
+
+.closeIcon {
+  z-index: 9999;
+
+  top: 0;
+  right: 0;
+  padding: 1rem;
 }
 
 .linkDesktop {
@@ -82,7 +116,7 @@
 /* TABLET */
 
 @media (min-width: 48rem) and (max-width: 64rem) {
-  .mobile_btn {
+  .fixedMobileNavContainer {
     display: none;
   }
   .navContainer {
@@ -155,7 +189,7 @@
 /* LAPTOP DESKTOP */
 
 @media (min-width: 64.0625rem) and (max-width: 80rem) {
-  .mobile_btn {
+  .fixedMobileNavContainer {
     display: none;
   }
   .navContainer {
@@ -229,7 +263,7 @@
 /* LARGE SCREENS */
 
 @media (min-width: 80.0625rem) {
-  .mobile_btn {
+  .fixedMobileNavContainer {
     display: none;
   }
   .navContainer {

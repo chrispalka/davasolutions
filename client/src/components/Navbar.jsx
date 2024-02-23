@@ -20,12 +20,18 @@ const Navbar = ({ scrollDirection, top, isLoading }) => {
 
   return (
     <div className={isLoading ? styles.navFadeIn : styles.nav}>
-      <div className={styles.mobile_btn} id='nav-click' onClick={toggleShowNav}>
-        {showNav ? (
-          <FontAwesomeIcon className={styles.icon} icon={faXmark} size='lg' />
-        ) : (
-          <FontAwesomeIcon className={styles.icon} icon={faBars} size='lg' />
-        )}
+      <div className={styles.fixedMobileNavContainer}>
+        <div className={styles.mobileNavLogoContainer}>
+          <a href='https://davasolutions.net'>
+            <img alt='white D dava solutions logo' src={Logo} />
+          </a>
+        </div>
+        <FontAwesomeIcon
+          className={styles.icon}
+          icon={faBars}
+          size='lg'
+          onClick={toggleShowNav}
+        />
       </div>
       <div
         className={
@@ -38,9 +44,12 @@ const Navbar = ({ scrollDirection, top, isLoading }) => {
         style={!scrollDirection ? { top: '-5rem' } : { top: 0 }}
       >
         <div className={styles.navWrapper}>
-          <div className={styles.logoContainer}>
-            <img src={Logo} className={styles.logo} alt='white D dava solutions logo' />
-          </div>
+          <FontAwesomeIcon
+            className={[styles.icon, styles.closeIcon].join(' ')}
+            icon={faXmark}
+            size='lg'
+            onClick={toggleShowNav}
+          />
           <div className={styles.linkMobile}>
             <div className={styles.links}>
               <a href='#home' onClick={toggleShowNav}>
