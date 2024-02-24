@@ -81,19 +81,40 @@
 .linkMobile div {
   color: black;
   padding: 1rem;
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-.linkMobile div:hover {
-  cursor: pointer;
-  color: red;
 }
 
 .linkMobile a {
   text-decoration: none;
   color: black;
+}
+
+.links0 {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0.4s;
+  -moz-transition: all 0.3s ease 0.4s;
+  transition: all 0.3s ease 0.4s;
+}
+.links1 {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0.5s;
+  -moz-transition: all 0.3s ease 0.5s;
+  transition: all 0.3s ease 0.5s;
+}
+.links2 {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0.6s;
+  -moz-transition: all 0.3s ease 0.6s;
+  transition: all 0.3s ease 0.6s;
+}
+.links3 {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0.7s;
+  -moz-transition: all 0.3s ease 0.7s;
+  transition: all 0.3s ease 0.7s;
+}
+
+.linksFadeIn {
+  opacity: 100;
 }
 
 .navWrapper {
@@ -111,6 +132,41 @@
 
 .logo {
   height: 10.125rem;
+}
+
+.swirlFwd {
+  -webkit-animation: swirl-in-fwd 0.4s ease-out 0.3s both;
+  animation: swirl-in-fwd 0.4s ease-out 0.3s both;
+}
+
+.swirlRvs {
+  -webkit-animation: swirl-in-fwd 0.6s ease-out reverse both;
+  animation: swirl-in-fwd 0.6s ease-out reverse both;
+}
+
+@-webkit-keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
 }
 
 /* TABLET */
@@ -151,6 +207,13 @@
   .navContainerTop .links a:hover {
     color: gray;
   }
+  .closeIcon {
+    display: none;
+  }
+
+  .links {
+    opacity: 100;
+  }
 
   .links a {
     color: gray;
@@ -183,6 +246,9 @@
 
   .linkDesktop a {
     text-decoration: none;
+  }
+  .scrollDirection {
+    top: -5rem;
   }
 }
 
@@ -225,6 +291,12 @@
   .navContainerTop .links a:hover {
     color: gray;
   }
+  .closeIcon {
+    display: none;
+  }
+  .links {
+    opacity: 100;
+  }
 
   .links a {
     color: gray;
@@ -257,6 +329,9 @@
 
   .linkDesktop a {
     text-decoration: none;
+  }
+  .scrollDirection {
+    top: -5rem;
   }
 }
 
@@ -299,9 +374,12 @@
   .navContainerTop .links a:hover {
     color: gray;
   }
+  .closeIcon {
+    display: none;
+  }
 
-  .navbarHidden {
-    top: -6rem;
+  .links {
+    opacity: 100;
   }
   .links a {
     color: black;
@@ -335,5 +413,8 @@
   }
   .linkDesktop a {
     text-decoration: none;
+  }
+  .scrollDirection {
+    top: -5rem;
   }
 }

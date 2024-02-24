@@ -9,6 +9,25 @@ const Navbar = ({ scrollDirection, top, isLoading }) => {
   const [showNav, setShowNav] = useState(false);
   const { lockScroll, unlockScroll } = useScrollLock();
 
+  const links = [
+    {
+      name: 'Home',
+      href: '#home',
+    },
+    {
+      name: 'About',
+      href: '#about',
+    },
+    {
+      name: 'Products',
+      href: '#products',
+    },
+    {
+      name: 'Contact',
+      href: '#contact',
+    },
+  ];
+
   const toggleShowNav = () => {
     setShowNav(!showNav);
     if (showNav) {
@@ -39,52 +58,44 @@ const Navbar = ({ scrollDirection, top, isLoading }) => {
             ? [styles.navContainer, styles.navActive].join(' ')
             : top
             ? [styles.navContainer, styles.navContainerTop].join(' ')
+            : !scrollDirection
+            ? [styles.navContainer, styles.scrollDirection].join(' ')
             : styles.navContainer
         }
-        style={!scrollDirection ? { top: '-5rem' } : { top: 0 }}
       >
         <div className={styles.navWrapper}>
           <FontAwesomeIcon
-            className={[styles.icon, styles.closeIcon].join(' ')}
+            className={
+              showNav
+                ? [styles.icon, styles.closeIcon, styles.swirlFwd].join(' ')
+                : [styles.icon, styles.closeIcon].join(' ')
+            }
             icon={faXmark}
             size='lg'
             onClick={toggleShowNav}
           />
           <div className={styles.linkMobile}>
-            <div className={styles.links}>
-              <a href='#home' onClick={toggleShowNav}>
-                Home
-              </a>
-            </div>
-            <div className={styles.links}>
-              <a href='#about' onClick={toggleShowNav}>
-                About
-              </a>
-            </div>
-            <div className={styles.links}>
-              <a href='#products' onClick={toggleShowNav}>
-                Products
-              </a>
-            </div>
-            <div className={styles.links}>
-              <a href='#contact' onClick={toggleShowNav}>
-                Contact
-              </a>
-            </div>
+            {links.map((link, index) => (
+              <div
+                className={
+                  showNav
+                    ? [styles[`links${index}`], styles.linksFadeIn].join(' ')
+                    : styles[`links${index}`]
+                }
+                key={index}
+              >
+                <a href={link.href} onClick={toggleShowNav}>
+                  {link.name}
+                </a>
+              </div>
+            ))}
           </div>
           <div className={styles.linkDesktop}>
-            <div className={styles.links}>
-              <a href='#home'>Home</a>
-            </div>
-            <div className={styles.links}>
-              <a href='#about'>About</a>
-            </div>
-            <div className={styles.links}>
-              <a href='#products'>Products</a>
-            </div>
-            <div className={styles.links}>
-              <a href='#contact'>Contact</a>
-            </div>
+            {links.map((link, index) => (
+              <div className={styles.links} key={index}>
+                <a href={link.href}>{link.name}</a>
+              </div>
+            ))}
           </div>
         </div>
       </div>
