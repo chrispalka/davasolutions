@@ -5,7 +5,7 @@
   left: -100%;
   top: 0;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #f0f4ef;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -33,7 +33,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  background-color: #fff;
+  background-color: #f0f4ef;
   z-index: 9998;
   padding: 1rem;
   box-shadow: 0px 18px 57px -5px rgba(0, 0, 0, 0.14);

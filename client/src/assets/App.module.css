@@ -11,14 +11,63 @@
   transition: all ease 1s;
 }
 
-.sectionWrapper a {
-  text-decoration: none;
-  transition: all 0.5s ease;
-  color: black;
+.heroContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.sectionWrapper a:hover {
-  color: gray;
+.heroContainer h1 {
+  color: #3c5c5e;
+  font-weight: 700;
+}
+
+#flip h1:first-child {
+  animation: show 5s linear infinite;
+}
+
+.heroSubContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 50px;
+}
+
+.heroSubContainer h1 {
+  display: inline-block;
+  padding: 4px 12px;
+  height: 45px;
+  margin-bottom: 45px;
+  white-space: nowrap;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
 }
 
 .footerSection {
@@ -34,23 +83,71 @@
   /* border: 2px solid yellow; */
   display: flex;
   background-color: black;
-
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
 
-.logoContainer {
+.topSection {
+  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 6.25rem;
   margin-bottom: 3.125rem;
+}
+
+.heroContainer {
+  padding: 2rem 1.5625rem;
+}
+
+.logoContainer {
+  opacity: 100;
   -webkit-transition: all ease 1s;
   -moz-transition: all ease 1s;
   transition: all ease 1s;
-  opacity: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logoContainerFadeIn {
+  opacity: 0;
+}
+
+.logoScaleOut {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    2.4s both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2.4s
+    both;
+  /* border: 2px solid purple; */
+}
+
+@-webkit-keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
 }
 
 .logoSubContainer {
@@ -62,10 +159,6 @@
   color: white;
   width: 100%;
   height: 400px;
-}
-
-.logoContainerFadeIn {
-  opacity: 0;
 }
 
 .logo {

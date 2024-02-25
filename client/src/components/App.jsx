@@ -15,6 +15,12 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { scrollDirection, topOfPage } = useScroll();
 
+  const list = [
+    'the Healthiest Snacks',
+    'the Best Customer Service',
+    'the most Affordable Prices',
+  ];
+
   useEffect(() => {
     setTimeout(() => {
       setIsSpinnerLoading(false);
@@ -39,22 +45,29 @@ const App = () => {
               : styles.logoContainer
           }
         >
-          <div>
-            <img src={DavaGIF} className={styles.logo} alt='white D dava solutions logo' />
-          </div>
-          <div>
-            <p
-              className={
-                isLoading
-                  ? [styles.sectionWrapper, styles.sectionWrapperFadeIn].join(
-                      ' '
-                    )
-                  : styles.sectionWrapper
-              }
-            >
-              <a href='tel:6784247208'>678-424-7208</a>6
-            </p>
-          </div>
+          <img
+            src={DavaGIF}
+            className={[styles.logo, styles.logoScaleOut].join(' ')}
+            alt='white D dava solutions logo'
+          />
+        </div>
+        <div className={styles.topSection}>
+          <section
+            className={
+              isLoading
+                ? [styles.sectionWrapper, styles.sectionWrapperFadeIn].join(' ')
+                : styles.sectionWrapper
+            }
+          >
+            <div className={styles.heroContainer}>
+              <h1>We strive to provide you</h1>
+              <div id={styles.flip} className={styles.heroSubContainer}>
+                {list.map((item, index) => (
+                  <h1 key={index}>{item}</h1>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
         <div
           className={
