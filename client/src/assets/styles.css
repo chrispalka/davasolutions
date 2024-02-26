@@ -14,7 +14,7 @@ body {
   left: 0;
   margin: 0;
   padding: 0;
-  background-color: #f0f4ef;
+  background-color: #eef1df;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 1em;
@@ -31,4 +31,16 @@ body {
 .carousel .control-dots .dot {
   background: black !important;
   display: none !important;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Alegreya Sans';
+  font-weight: 700;
+}
+
+p,
+span {
+  font-family: 'Alegreya';
 }

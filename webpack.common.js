@@ -1,13 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const path = require('path');
 
 const SRC_DIR = path.join(__dirname, 'client/src');
-
-
 
 module.exports = {
   cache: false,
@@ -23,7 +21,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[name].main.css',
-    })
+    }),
   ],
 
   module: {
@@ -42,9 +40,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [{
-          loader: MiniCssExtractPlugin.loader,
-        }, 'css-loader',
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          'css-loader',
         ],
       },
       {
@@ -53,7 +53,7 @@ module.exports = {
       },
       {
         test: [/\.(eot|mp4|ttf|otf|woff|woff2|gif)$/i, /.(png|jpg|jpeg|gif)$/i],
-        type: 'asset/resource'
+        type: 'asset/resource',
       },
     ],
   },
@@ -84,4 +84,3 @@ module.exports = {
     },
   },
 };
-

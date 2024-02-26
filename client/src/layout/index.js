@@ -3,7 +3,9 @@ import Form from '../components/Form';
 import Button from '../components/Button';
 import ImageCarousel from '../components/ImageCarousel';
 import Product from '../components/Product';
-import Products from '../components/Products';
+import Solutions from '../components/Solutions';
+import Card from '../components/Card';
+import Hero from '../components/Hero';
 import useScrollLock from '../hooks/useScrollLock';
 import useScroll from '../hooks/useScroll';
 
@@ -12,8 +14,10 @@ export {
   Form,
   Button,
   ImageCarousel,
-  Products,
+  Solutions,
   Product,
+  Card,
+  Hero,
   useScrollLock,
-  useScroll
+  useScroll,
 };

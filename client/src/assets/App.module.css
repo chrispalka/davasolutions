@@ -11,65 +11,6 @@
   transition: all ease 1s;
 }
 
-.heroContainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.heroContainer h1 {
-  color: #3c5c5e;
-  font-weight: 700;
-}
-
-#flip h1:first-child {
-  animation: show 5s linear infinite;
-}
-
-.heroSubContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  height: 50px;
-}
-
-.heroSubContainer h1 {
-  display: inline-block;
-  padding: 4px 12px;
-  height: 45px;
-  margin-bottom: 45px;
-  white-space: nowrap;
-}
-
-@keyframes show {
-  0% {
-    margin-top: -270px;
-  }
-  5% {
-    margin-top: -180px;
-  }
-  33% {
-    margin-top: -180px;
-  }
-  38% {
-    margin-top: -90px;
-  }
-  66% {
-    margin-top: -90px;
-  }
-  71% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: -270px;
-  }
-}
-
 .footerSection {
   background-color: #ffffff;
   height: 700px;
@@ -79,27 +20,31 @@
   opacity: 0;
 }
 
-.logoSection {
-  /* border: 2px solid yellow; */
+.whatWeOfferContainer {
   display: flex;
-  background-color: black;
+  background-color: #516750;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
 
-.topSection {
-  /* border: 2px solid red; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 6.25rem;
-  margin-bottom: 3.125rem;
+.whatWeOfferSubContainer {
+  padding: 2rem calc(50% - 600px);
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  height: 100%;
 }
 
-.heroContainer {
-  padding: 2rem 1.5625rem;
+.whatWeOfferSubContainer p {
+  font-size: 18px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .logoContainer {
@@ -148,17 +93,6 @@
     transform: scale(0);
     opacity: 1;
   }
-}
-
-.logoSubContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 1.5625rem;
-  text-align: center;
-  color: white;
-  width: 100%;
-  height: 400px;
 }
 
 .logo {
@@ -221,7 +155,7 @@
   .contactSection {
     padding-top: 7.25rem;
   }
-  .logoSection {
+  .whatWeOfferContainer {
   }
   .carouselSection {
   }
@@ -240,7 +174,7 @@
 
   .carouselSection {
   }
-  .logoSection {
+  .whatWeOfferContainer {
   }
   .listSection {
     height: 50rem;
@@ -259,7 +193,7 @@
   }
   .carouselSection {
   }
-  .logoSection {
+  .whatWeOfferContainer {
   }
   .listSection {
     height: 50rem;

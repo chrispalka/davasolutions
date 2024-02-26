@@ -4,22 +4,19 @@ import DavaGIF from '../assets/images/Dava.GIF';
 import {
   Navbar,
   Form,
-  Products,
+  Solutions,
   useScroll,
   ImageCarousel,
+  Hero,
 } from '../layout/index.js';
+import '@fontsource/alegreya-sans';
+import '@fontsource/alegreya';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const App = () => {
   const [isSpinnerLoading, setIsSpinnerLoading] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const { scrollDirection, topOfPage } = useScroll();
-
-  const list = [
-    'the Healthiest Snacks',
-    'the Best Customer Service',
-    'the most Affordable Prices',
-  ];
 
   useEffect(() => {
     setTimeout(() => {
@@ -51,24 +48,7 @@ const App = () => {
             alt='white D dava solutions logo'
           />
         </div>
-        <div className={styles.topSection}>
-          <section
-            className={
-              isLoading
-                ? [styles.sectionWrapper, styles.sectionWrapperFadeIn].join(' ')
-                : styles.sectionWrapper
-            }
-          >
-            <div className={styles.heroContainer}>
-              <h1>We strive to provide you</h1>
-              <div id={styles.flip} className={styles.heroSubContainer}>
-                {list.map((item, index) => (
-                  <h1 key={index}>{item}</h1>
-                ))}
-              </div>
-            </div>
-          </section>
-        </div>
+        <Hero isLoading={isLoading} />
         <div
           className={
             isLoading
@@ -76,15 +56,7 @@ const App = () => {
               : styles.sectionWrapper
           }
         >
-          <section className={styles.logoSection}>
-            <div className={styles.logoSubContainer}>
-              We strive to provide you the best customer service, the healthiest
-              snacks, at an affordable price!
-            </div>
-          </section>
-          <section id='products' className={styles.carouselSection}>
-            <Products />
-          </section>
+          <Solutions />
           <section className={styles.listSection}>
             <ImageCarousel />
           </section>
