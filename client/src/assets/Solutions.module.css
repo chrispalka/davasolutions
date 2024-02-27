@@ -6,6 +6,19 @@
   padding: 0.5rem 0.5rem 3rem 0.5rem;
 }
 
+.sectionWrapper {
+  padding-top: 3.25rem;
+  margin-bottom: 3.125rem;
+  opacity: 100;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.sectionWrapperFadeIn {
+  opacity: 0;
+}
+
 .icon {
   color: black;
   font-size: 10vw;
@@ -35,7 +48,7 @@
 
 .whatWeOfferContainer {
   display: flex;
-  background-color: #516750;
+  background-color: #162c6c;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;

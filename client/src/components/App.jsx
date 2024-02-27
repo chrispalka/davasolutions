@@ -49,6 +49,7 @@ const App = () => {
           />
         </div>
         <Hero isLoading={isLoading} />
+        <Solutions isLoading={isLoading} />
         <div
           className={
             isLoading
@@ -56,13 +57,11 @@ const App = () => {
               : styles.sectionWrapper
           }
         >
-          <Solutions />
           <section className={styles.listSection}>
             <ImageCarousel />
           </section>
-          <section id='contact' className={styles.contactSection}>
-            <Form />
-          </section>
+
+          <Form isLoading={isLoading} />
           {/* <footer className={styles.footerSection}>footer text</footer> */}
         </div>
       </main>

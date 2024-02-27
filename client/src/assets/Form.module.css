@@ -1,6 +1,30 @@
-.formContainer {
+.sectionWrapper {
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
+  background-color: #162c6c;
+  opacity: 100;
   display: flex;
-  padding: 0 1.5625rem;
+  justify-content: center;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.sectionWrapperFadeIn {
+  opacity: 100;
+}
+
+.formContainer {
+  padding: 0 0.75rem 0;
+  width: 100%;
+}
+
+.formSubContainer {
+  display: flex;
+  padding: 2rem calc(50% - 600px);
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
   flex-direction: column;
   align-items: center;
 }
@@ -117,11 +141,11 @@
 .button {
   all: unset;
   cursor: pointer;
-  padding: 0.4rem;
+  padding: 0.5rem;
   width: 3.75rem;
   font-weight: 700;
   border-radius: 0.3125rem;
-  background-color: black;
+  background-color: #2196f3;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -141,4 +165,26 @@
   color: red;
   margin: 0;
   height: 1.5rem;
+}
+
+@media (min-width: 48rem) and (max-width: 64rem) {
+  .formContainer {
+    width: 33%;
+  }
+}
+
+/* LAPTOP DESKTOP */
+
+@media (min-width: 64.0625rem) and (max-width: 80rem) {
+  .formContainer {
+    width: 33%;
+  }
+}
+
+/* LARGE SCREENS */
+
+@media (min-width: 80.0625rem) {
+  .formContainer {
+    width: 33%;
+  }
 }

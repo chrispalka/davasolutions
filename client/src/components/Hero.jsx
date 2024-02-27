@@ -15,14 +15,14 @@ const Hero = ({ isLoading }) => {
           : styles.sectionWrapper
       }
     >
-      <section className={styles.heroContainer}>
+      <div className={styles.heroContainer}>
         <h1>We strive to provide you</h1>
         <div id={styles.flip} className={styles.heroSubContainer}>
           {list.map((item, index) => (
             <h1 key={index}>{item}</h1>
           ))}
         </div>
-      </section>
+      </div>
     </section>
   );
 };

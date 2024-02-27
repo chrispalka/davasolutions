@@ -9,13 +9,13 @@
 
 .card {
   /* Add shadows to create the "card" effect */
-  background-color: #eef1df;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
   position: relative;
   height: 90%;
   width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  border-radius: 6px;
   position: relative;
   box-sizing: border-box;
 }
@@ -25,9 +25,11 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.cardDetails h1,
+.cardDetails h1 {
+  color: #162c6c;
+}
 .cardDetails p {
-  color: #516750;
+  color: #0f1c40;
 }
 
 .cardDetails {

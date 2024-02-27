@@ -14,7 +14,7 @@ body {
   left: 0;
   margin: 0;
   padding: 0;
-  background-color: #eef1df;
+  background-color: #f8f8f8;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 1em;
@@ -38,6 +38,11 @@ h2,
 h3 {
   font-family: 'Alegreya Sans';
   font-weight: 700;
+}
+
+a {
+  font-family: 'Alegreya Sans';
+  color: #0f1c40;
 }
 
 p,

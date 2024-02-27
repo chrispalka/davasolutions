@@ -5,7 +5,7 @@
   left: -100%;
   top: 0;
   height: 100vh;
-  background-color: #eef1df;
+  background-color: #f8f8f8;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -33,7 +33,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  background-color: #eef1df;
+  background-color: #f8f8f8;
   z-index: 9998;
   padding: 1rem;
   box-shadow: 0px 18px 57px -5px rgba(0, 0, 0, 0.14);
@@ -53,7 +53,7 @@
 }
 
 .icon {
-  color: black;
+  color: #0f1c40;
 }
 
 .closeIcon {
@@ -79,13 +79,13 @@
 }
 
 .linkMobile div {
-  color: black;
+  color: #0f1c40;
   padding: 1rem;
 }
 
 .linkMobile a {
   text-decoration: none;
-  color: black;
+  color: #0f1c40;
 }
 
 .links0 {
@@ -176,7 +176,7 @@
     display: none;
   }
   .navContainer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.6);
     display: flex;
     height: 4rem;
     left: 0;
@@ -196,12 +196,12 @@
     transition: all ease 1s;
   }
   .navContainerTop {
-    background-color: #eef1df;
+    background-color: #f8f8f8;
     box-shadow: none;
   }
 
   .navContainerTop .links a {
-    color: black;
+    color: #0f1c40;
   }
 
   .navContainerTop .links a:hover {
@@ -259,7 +259,7 @@
     display: none;
   }
   .navContainer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.6);
     display: flex;
     height: 4rem;
     left: 0;
@@ -280,12 +280,12 @@
   }
 
   .navContainerTop {
-    background-color: #eef1df;
+    background-color: #f8f8f8;
     box-shadow: none;
   }
 
   .navContainerTop .links a {
-    color: black;
+    color: #0f1c40;
   }
 
   .navContainerTop .links a:hover {
@@ -363,12 +363,12 @@
   }
 
   .navContainerTop {
-    background-color: #eef1df;
+    background-color: #f8f8f8;
     box-shadow: none;
   }
 
   .navContainerTop .links a {
-    color: black;
+    color: #0f1c40;
   }
 
   .navContainerTop .links a:hover {
@@ -382,7 +382,7 @@
     opacity: 100;
   }
   .links a {
-    color: black;
+    color: #0f1c40;
     -webkit-transition: all ease-in-out 0.5s;
     -moz-transition: all ease-in-out 0.5s;
     transition: all ease-in-out 0.5s;

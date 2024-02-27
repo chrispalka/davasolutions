@@ -48,114 +48,131 @@ const Form = () => {
   };
 
   return (
-    <div className={styles.formContainer}>
-      {!isComplete ? (
-        <>
-          <h1 className={styles.heading}>Get in touch!</h1>
-          <h2 className={styles.subHeading}>
-            Fill out the form below, and we will get back to you as soon as
-            possible!
-          </h2>
-          <form onSubmit={handleSubmit(onSubmit)} className={styles.styledForm}>
-            <div className={styles.inputContainer}>
-              <input
-                className={styles.input}
-                type='text'
-                {...register('firstName', {
-                  required: 'This field is required!',
-                })}
-                placeholder='First Name'
-                disabled={isLoading}
-              />
-              <p className={styles.error}>{errors.firstName?.message}</p>
-            </div>
-            <div className={styles.inputContainer}>
-              <input
-                className={styles.input}
-                type='text'
-                {...register('lastName', {
-                  required: 'This field is required!',
-                })}
-                placeholder='Last Name'
-                disabled={isLoading}
-              />
-              <p className={styles.error}>{errors.lastName?.message}</p>
-            </div>
-            <div className={styles.inputContainer}>
-              <input
-                className={styles.input}
-                {...register('email', {
-                  required: 'This field is required!',
-                  pattern: {
-                    value: /\S+@\S+\.\S+/,
-                    message: 'Entered value does not match email format',
-                  },
-                })}
-                type='email'
-                placeholder='Email'
-                disabled={isLoading}
-              />
-              <p className={styles.error}>{errors.email?.message}</p>
-            </div>
-            <div
-              className={[styles.inputContainer, styles.telContainer].join(' ')}
-            >
-              <Controller
-                control={control}
-                name='phone'
-                defaultValue=''
-                render={({ field: { onChange, onBlur, ref } }) => (
-                  <InputMask
-                    mask='(999) 999-9999'
-                    onBlur={onBlur}
-                    onChange={onChange}
-                    inputRef={ref}
-                    inputMode='numeric'
-                    placeholder='(555) 555-5555'
-                    disabled={isLoading}
+    <section
+      className={
+        isLoading
+          ? [styles.sectionWrapper, styles.sectionWrapperFadeIn].join(' ')
+          : styles.sectionWrapper
+      }
+    >
+      <div className={styles.formContainer}>
+        <div className={styles.formSubContainer}>
+          {!isComplete ? (
+            <>
+              <h1 className={styles.heading}>Get in touch!</h1>
+              <h2 className={styles.subHeading}>
+                Fill out the form below, and we will get back to you as soon as
+                possible!
+              </h2>
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className={styles.styledForm}
+              >
+                <div className={styles.inputContainer}>
+                  <input
                     className={styles.input}
+                    type='text'
+                    {...register('firstName', {
+                      required: 'This field is required!',
+                    })}
+                    placeholder='First Name'
+                    disabled={isLoading}
                   />
-                )}
+                  <p className={styles.error}>{errors.firstName?.message}</p>
+                </div>
+                <div className={styles.inputContainer}>
+                  <input
+                    className={styles.input}
+                    type='text'
+                    {...register('lastName', {
+                      required: 'This field is required!',
+                    })}
+                    placeholder='Last Name'
+                    disabled={isLoading}
+                  />
+                  <p className={styles.error}>{errors.lastName?.message}</p>
+                </div>
+                <div className={styles.inputContainer}>
+                  <input
+                    className={styles.input}
+                    {...register('email', {
+                      required: 'This field is required!',
+                      pattern: {
+                        value: /\S+@\S+\.\S+/,
+                        message: 'Entered value does not match email format',
+                      },
+                    })}
+                    type='email'
+                    placeholder='Email'
+                    disabled={isLoading}
+                  />
+                  <p className={styles.error}>{errors.email?.message}</p>
+                </div>
+                <div
+                  className={[styles.inputContainer, styles.telContainer].join(
+                    ' '
+                  )}
+                >
+                  <Controller
+                    control={control}
+                    name='phone'
+                    defaultValue=''
+                    render={({ field: { onChange, onBlur, ref } }) => (
+                      <InputMask
+                        mask='(999) 999-9999'
+                        onBlur={onBlur}
+                        onChange={onChange}
+                        inputRef={ref}
+                        inputMode='numeric'
+                        placeholder='(555) 555-5555'
+                        disabled={isLoading}
+                        className={styles.input}
+                      />
+                    )}
+                  />
+                </div>
+                <div
+                  className={[styles.inputContainer, styles.telContainer].join(
+                    ' '
+                  )}
+                >
+                  <textarea
+                    className={styles.input}
+                    type='text'
+                    {...register('message')}
+                    rows='8'
+                    placeholder='Questions, comments, concerns?'
+                    disabled={isLoading}
+                  />
+                </div>
+                <div className={styles.inputContainer}>
+                  <Button type='submit' className={styles.button}>
+                    {isLoading ? (
+                      <FontAwesomeIcon
+                        className={'fa-spin'}
+                        icon={faSpinner}
+                        size='lg'
+                      />
+                    ) : (
+                      <>Submit</>
+                    )}
+                  </Button>
+                </div>
+              </form>
+            </>
+          ) : (
+            <div className={styles.thankYouContainer}>
+              <h1 className={styles.heading}>Thank you!</h1>
+              <FontAwesomeIcon
+                className={styles.icon}
+                icon={faCheckCircle}
+                size='lg'
               />
             </div>
-            <div
-              className={[styles.inputContainer, styles.telContainer].join(' ')}
-            >
-              <textarea
-                className={styles.input}
-                type='text'
-                {...register('message')}
-                rows='8'
-                placeholder='Questions, comments, concerns?'
-                disabled={isLoading}
-              />
-            </div>
-            <div className={styles.inputContainer}>
-              <Button type='submit' className={styles.button}>
-                {isLoading ? (
-                  <FontAwesomeIcon
-                    className={'fa-spin'}
-                    icon={faSpinner}
-                    size='lg'
-                  />
-                ) : (
-                  <>Submit</>
-                )}
-              </Button>
-            </div>
-          </form>
-        </>
-      ) : (
-        <div className={styles.thankYouContainer}>
-          <h1 className={styles.heading}>Thank you!</h1>
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={faCheckCircle}
-            size='lg'
-          />
+          )}
         </div>
-      )}
-    </div>
+      </div>
+    </section>
   );
 };
 
