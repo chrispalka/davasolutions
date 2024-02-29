@@ -5,6 +5,8 @@ import styles from '../assets/Solutions.module.css';
 
 import vendingUpClose from '../assets/images/vending_up_close.jpeg';
 import microMarket1 from '../assets/images/micro-market-1.jpg';
+import coffeeMachine from '../assets/images/coffeesolutions.jpeg';
+import waterBottle from '../assets/images/waterbottle.jpeg';
 
 const solutions = [
   {
@@ -23,8 +25,34 @@ const solutions = [
   {
     title: 'Micro Markets',
     description:
-      'Introducing our Micro Market Solution – your new, convenient oasis for snacks and essentials!',
+      'Your new, convenient oasis for snacks and essentials! Tailored just for your space, our Micro Market is like having a mini-store at your fingertips, offering a wide array of fresh and delicious options.',
     thumbnail: microMarket1,
+    images: [
+      'https://cdn.dummyjson.com/product-images/1/1.jpg',
+      'https://cdn.dummyjson.com/product-images/1/2.jpg',
+      'https://cdn.dummyjson.com/product-images/1/3.jpg',
+      'https://cdn.dummyjson.com/product-images/1/4.jpg',
+      'https://cdn.dummyjson.com/product-images/1/thumbnail.jpg',
+    ],
+  },
+  {
+    title: 'Coffee',
+    description:
+      'Why settle for ordinary when you can savor extraordinary? Our cutting-edge technology ensures each cup is a masterpiece, delivering the perfect blend of flavor and satisfaction.',
+    thumbnail: coffeeMachine,
+    images: [
+      'https://cdn.dummyjson.com/product-images/1/1.jpg',
+      'https://cdn.dummyjson.com/product-images/1/2.jpg',
+      'https://cdn.dummyjson.com/product-images/1/3.jpg',
+      'https://cdn.dummyjson.com/product-images/1/4.jpg',
+      'https://cdn.dummyjson.com/product-images/1/thumbnail.jpg',
+    ],
+  },
+  {
+    title: 'Water',
+    description:
+      'Experience the ease of staying refreshed with a simple touch. Equip your space with the latest technology, delivering a seamless and eco-friendly way to access premium water anytime, anywhere.',
+    thumbnail: waterBottle,
     images: [
       'https://cdn.dummyjson.com/product-images/1/1.jpg',
       'https://cdn.dummyjson.com/product-images/1/2.jpg',

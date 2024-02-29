@@ -55,7 +55,10 @@
 }
 
 .whatWeOfferSubContainer {
-  padding: 2rem calc(50% - 600px);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   text-align: center;
   color: #fff;
   width: 100%;
@@ -87,6 +90,9 @@
     align-items: center;
     height: 100%;
   }
+  .whatWeOfferSubContainer {
+    padding: 2rem calc(50% - 600px);
+  }
 }
 
 /* LAPTOP DESKTOP */
@@ -104,6 +110,9 @@
     align-items: center;
     height: 100%;
   }
+  .whatWeOfferSubContainer {
+    padding: 2rem calc(50% - 600px);
+  }
 }
 
 /* LARGE SCREENS */
@@ -117,5 +126,8 @@
   }
   .nonCarouselWrapper {
     display: flex;
+  }
+  .whatWeOfferSubContainer {
+    padding: 2rem calc(50% - 600px);
   }
 }

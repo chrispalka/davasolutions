@@ -1,10 +1,8 @@
 .cardContainer {
-  padding: 0 0.75rem 0;
-  height: 500px;
-  width: 100%;
   margin-top: 1.5rem;
   align-items: flex-end;
   display: flex;
+  height: 500px;
 }
 
 .card {
@@ -25,7 +23,7 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.cardDetails h1 {
+.cardDetails h2 {
   color: #162c6c;
 }
 .cardDetails p {
@@ -33,7 +31,6 @@
 }
 
 .cardDetails {
-  margin-top: 1rem;
   padding: 1rem;
 }
 
@@ -59,7 +56,8 @@
 
 @media (min-width: 48rem) and (max-width: 64rem) {
   .cardContainer {
-    width: 33%;
+    padding: 0 0.75rem 0;
+    width: 33.33333333%;
   }
 }
 
@@ -67,7 +65,8 @@
 
 @media (min-width: 64.0625rem) and (max-width: 80rem) {
   .cardContainer {
-    width: 33%;
+    padding: 0 0.75rem 0;
+    width: 33.33333333%;
   }
 }
 
@@ -75,6 +74,7 @@
 
 @media (min-width: 80.0625rem) {
   .cardContainer {
-    width: 33%;
+    padding: 0 0.75rem 0;
+    width: 33.33333333%;
   }
 }

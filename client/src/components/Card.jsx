@@ -9,7 +9,7 @@ const Card = ({ image, title, description, index }) => {
           <img src={image} />
         </div>
         <div className={styles.cardDetails}>
-          <h1>{title}</h1>
+          <h2>{title}</h2>
           <p>{description}</p>
         </div>
       </div>
