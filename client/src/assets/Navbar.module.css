@@ -53,7 +53,7 @@
 }
 
 .icon {
-  color: #0f1c40;
+  color: var(--subtext);
 }
 
 .closeIcon {
@@ -85,7 +85,6 @@
 
 .linkMobile a {
   text-decoration: none;
-  color: #0f1c40;
 }
 
 .links0 {
@@ -200,13 +199,6 @@
     box-shadow: none;
   }
 
-  .navContainerTop .links a {
-    color: #0f1c40;
-  }
-
-  .navContainerTop .links a:hover {
-    color: gray;
-  }
   .closeIcon {
     display: none;
   }
@@ -367,13 +359,6 @@
     box-shadow: none;
   }
 
-  .navContainerTop .links a {
-    color: #0f1c40;
-  }
-
-  .navContainerTop .links a:hover {
-    color: gray;
-  }
   .closeIcon {
     display: none;
   }
@@ -382,16 +367,13 @@
     opacity: 100;
   }
   .links a {
-    color: #0f1c40;
     -webkit-transition: all ease-in-out 0.5s;
     -moz-transition: all ease-in-out 0.5s;
     transition: all ease-in-out 0.5s;
   }
+
   .linkMobile {
     display: none;
-  }
-  .links a:hover {
-    color: gray;
   }
 
   .logoContainer {

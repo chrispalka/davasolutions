@@ -1,3 +1,10 @@
+:root {
+  --background: #f8f8f8;
+  --heading: #162c6c;
+  --contrastbackground: #87ceeb;
+  --subtext: #33333;
+}
+
 html {
   height: -webkit-fill-available;
   scroll-behavior: smooth;
@@ -14,12 +21,11 @@ body {
   left: 0;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
-  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background);
+  font-family: 'Alegreya Sans', sans-serif;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.5;
-  color: #fff;
   margin: 0px;
   width: 100%;
   min-height: 100%;
@@ -36,16 +42,23 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'Alegreya Sans';
+  font-family: 'Montserrat';
   font-weight: 700;
+  color: var(--heading);
 }
 
 a {
   font-family: 'Alegreya Sans';
-  color: #0f1c40;
+  color: var(--subtext);
+  font-weight: 700;
+}
+
+a:hover {
+  color: gray;
 }
 
 p,
 span {
-  font-family: 'Alegreya';
+  font-family: 'Lato';
+  color: var(--subtext);
 }

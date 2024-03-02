@@ -23,13 +23,6 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.cardDetails h2 {
-  color: #162c6c;
-}
-.cardDetails p {
-  color: #0f1c40;
-}
-
 .cardDetails {
   padding: 1rem;
 }

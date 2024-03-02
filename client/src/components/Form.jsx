@@ -60,10 +60,10 @@ const Form = () => {
           {!isComplete ? (
             <>
               <h1 className={styles.heading}>Get in touch!</h1>
-              <h2 className={styles.subHeading}>
+              <p className={styles.subHeading}>
                 Fill out the form below, and we will get back to you as soon as
                 possible!
-              </h2>
+              </p>
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 className={styles.styledForm}

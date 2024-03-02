@@ -1,7 +1,8 @@
 .sectionWrapper {
   padding-top: 3.25rem;
   padding-bottom: 3.25rem;
-  background-color: #162c6c;
+  margin-top: 3.125rem;
+  background-color: var(--contrastbackground);
   opacity: 100;
   display: flex;
   justify-content: center;
@@ -21,7 +22,7 @@
 
 .formSubContainer {
   display: flex;
-  padding: 2rem calc(50% - 600px);
+  padding: 1.5rem;
   background-color: #f8f8f8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 6px;
@@ -29,16 +30,9 @@
   align-items: center;
 }
 
-.heading {
-  color: black;
-  font-weight: 700;
-}
-
 .subHeading {
-  color: black;
   text-align: center;
   font-size: 1em;
-  font-weight: 300;
   font-style: italic;
   margin-bottom: 2rem;
 }

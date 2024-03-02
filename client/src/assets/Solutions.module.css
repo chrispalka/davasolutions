@@ -7,7 +7,6 @@
 }
 
 .sectionWrapper {
-  padding-top: 3.25rem;
   margin-bottom: 3.125rem;
   opacity: 100;
   -webkit-transition: all ease 1s;
@@ -48,7 +47,7 @@
 
 .whatWeOfferContainer {
   display: flex;
-  background-color: #162c6c;
+  background-color: var(--contrastbackground);
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -60,7 +59,6 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
   text-align: center;
-  color: #fff;
   width: 100%;
   height: 100%;
 }

@@ -65,6 +65,7 @@ const solutions = [
 
 const Solutions = ({ isLoading }) => (
   <section
+    id='solutions'
     className={
       isLoading
         ? [styles.sectionWrapper, styles.sectionWrapperFadeIn].join(' ')

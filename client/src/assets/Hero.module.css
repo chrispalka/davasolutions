@@ -6,13 +6,12 @@
   padding: 2rem calc(50% - 600px);
 }
 
-.heroContainer h1 {
-  color: #162c6c;
-  font-weight: 700;
-}
-
 #flip h1:first-child {
   animation: show 6s linear infinite alternate;
+}
+
+.heroContainer h1 {
+  font-family: 'Alegreya Sans';
 }
 
 .heroSubContainer {
@@ -29,6 +28,7 @@
   height: 45px;
   margin-bottom: 45px;
   white-space: nowrap;
+  font-family: 'Alegreya Sans';
 }
 
 .sectionWrapper {
@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 12rem;
-  margin-bottom: 3.125rem;
+  margin-bottom: 6.125rem;
   opacity: 100;
   -webkit-transition: all ease 1s;
   -moz-transition: all ease 1s;

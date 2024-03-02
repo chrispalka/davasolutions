@@ -24,6 +24,7 @@
   "dependencies": {
     "@fontsource/alegreya": "^5.0.8",
     "@fontsource/alegreya-sans": "^5.0.8",
+    "@fontsource/lato": "^5.0.18",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",

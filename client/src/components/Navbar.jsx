@@ -15,12 +15,12 @@ const Navbar = ({ scrollDirection, top, isLoading }) => {
       href: '#home',
     },
     {
-      name: 'About',
-      href: '#about',
+      name: 'Solutions',
+      href: '#solutions',
     },
     {
-      name: 'Products',
-      href: '#products',
+      name: 'About',
+      href: '#about',
     },
     {
       name: 'Contact',

@@ -11,6 +11,7 @@ import {
 } from '../layout/index.js';
 import '@fontsource/alegreya-sans';
 import '@fontsource/alegreya';
+import '@fontsource/lato';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const App = () => {
@@ -60,7 +61,6 @@ const App = () => {
           <section className={styles.listSection}>
             <ImageCarousel />
           </section>
-
           <Form isLoading={isLoading} />
           {/* <footer className={styles.footerSection}>footer text</footer> */}
         </div>
