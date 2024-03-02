@@ -3,7 +3,27 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 2rem calc(50% - 600px);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.flipContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.aboutContainer p {
+  text-align: center;
 }
 
 #flip h1:first-child {
@@ -39,6 +59,7 @@
   padding-top: 12rem;
   margin-bottom: 6.125rem;
   opacity: 100;
+
   -webkit-transition: all ease 1s;
   -moz-transition: all ease 1s;
   transition: all ease 1s;
@@ -68,5 +89,29 @@
   90%,
   99.99% {
     margin-top: 0;
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 48rem) and (max-width: 64rem) {
+  .heroContainer {
+    padding: 2rem calc(50% - 600px);
+  }
+}
+
+/* LAPTOP DESKTOP */
+
+@media (min-width: 64.0625rem) and (max-width: 80rem) {
+  .heroContainer {
+    padding: 2rem calc(50% - 600px);
+  }
+}
+
+/* LARGE SCREENS */
+
+@media (min-width: 80.0625rem) {
+  .heroContainer {
+    padding: 2rem calc(50% - 600px);
   }
 }

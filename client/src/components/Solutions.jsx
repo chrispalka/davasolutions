@@ -63,11 +63,11 @@ const solutions = [
   },
 ];
 
-const Solutions = ({ isLoading }) => (
+const Solutions = ({ isPageLoading }) => (
   <section
     id='solutions'
     className={
-      isLoading
+      isPageLoading
         ? [styles.sectionWrapper, styles.sectionWrapperFadeIn].join(' ')
         : styles.sectionWrapper
     }

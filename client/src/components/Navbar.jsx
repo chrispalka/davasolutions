@@ -5,7 +5,7 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useScrollLock } from '../layout/index.js';
 import Logo from '../assets/images/Dava.png';
 
-const Navbar = ({ scrollDirection, top, isLoading }) => {
+const Navbar = ({ scrollDirection, top, isPageLoading }) => {
   const [showNav, setShowNav] = useState(false);
   const { lockScroll, unlockScroll } = useScrollLock();
 
@@ -38,7 +38,7 @@ const Navbar = ({ scrollDirection, top, isLoading }) => {
   };
 
   return (
-    <div className={isLoading ? styles.navFadeIn : styles.nav}>
+    <div className={isPageLoading ? styles.navFadeIn : styles.nav}>
       <div className={styles.fixedMobileNavContainer}>
         <div className={styles.mobileNavLogoContainer}>
           <a href='https://davasolutions.net'>

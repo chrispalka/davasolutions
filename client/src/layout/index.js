@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import Form from '../components/Form';
 import Button from '../components/Button';
-import ImageCarousel from '../components/ImageCarousel';
+import About from '../components/About';
 import Product from '../components/Product';
 import Solutions from '../components/Solutions';
 import Card from '../components/Card';
@@ -13,7 +13,7 @@ export {
   Navbar,
   Form,
   Button,
-  ImageCarousel,
+  About,
   Solutions,
   Product,
   Card,

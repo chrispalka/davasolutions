@@ -6,7 +6,7 @@ import {
   Form,
   Solutions,
   useScroll,
-  ImageCarousel,
+  About,
   Hero,
 } from '../layout/index.js';
 import '@fontsource/alegreya-sans';
@@ -33,7 +33,7 @@ const App = () => {
       <Navbar
         scrollDirection={scrollDirection}
         top={topOfPage}
-        isLoading={isLoading}
+        isPageLoading={isLoading}
       />
       <main id='home' className={styles.mainWrapper}>
         <div
@@ -49,21 +49,11 @@ const App = () => {
             alt='white D dava solutions logo'
           />
         </div>
-        <Hero isLoading={isLoading} />
-        <Solutions isLoading={isLoading} />
-        <div
-          className={
-            isLoading
-              ? [styles.sectionWrapper, styles.sectionWrapperFadeIn].join(' ')
-              : styles.sectionWrapper
-          }
-        >
-          <section className={styles.listSection}>
-            <ImageCarousel />
-          </section>
-          <Form isLoading={isLoading} />
-          {/* <footer className={styles.footerSection}>footer text</footer> */}
-        </div>
+        <Hero isPageLoading={isLoading} />
+        <Solutions isPageLoading={isLoading} />
+        <About isPageLoading={isLoading} />
+        <Form isPageLoading={isLoading} />
+        {/* <footer className={styles.footerSection}>footer text</footer> */}
       </main>
     </>
   );

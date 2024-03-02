@@ -24,6 +24,7 @@
 }
 
 .cardDetails {
+  text-align: center;
   padding: 1rem;
 }
 
@@ -52,6 +53,9 @@
     padding: 0 0.75rem 0;
     width: 33.33333333%;
   }
+  .cardDetails {
+    text-align: left;
+  }
 }
 
 /* LAPTOP DESKTOP */
@@ -61,6 +65,9 @@
     padding: 0 0.75rem 0;
     width: 33.33333333%;
   }
+  .cardDetails {
+    text-align: left;
+  }
 }
 
 /* LARGE SCREENS */
@@ -69,5 +76,8 @@
   .cardContainer {
     padding: 0 0.75rem 0;
     width: 33.33333333%;
+  }
+  .cardDetails {
+    text-align: left;
   }
 }

@@ -10,7 +10,7 @@ const axios = require('axios');
 
 const api = process.env.API_DOMAIN;
 
-const Form = () => {
+const Form = ({ isPageLoading }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
   const {
@@ -49,8 +49,9 @@ const Form = () => {
 
   return (
     <section
+      id='contact'
       className={
-        isLoading
+        isPageLoading
           ? [styles.sectionWrapper, styles.sectionWrapperFadeIn].join(' ')
           : styles.sectionWrapper
       }
