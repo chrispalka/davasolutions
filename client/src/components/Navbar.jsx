@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../assets/Navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +8,14 @@ import Logo from '../assets/images/Dava.png';
 const Navbar = ({ scrollDirection, top, isPageLoading }) => {
   const [showNav, setShowNav] = useState(false);
   const { lockScroll, unlockScroll } = useScrollLock();
+
+  useEffect(() => {
+    if (isPageLoading) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+  }, [isPageLoading]);
 
   const links = [
     {
