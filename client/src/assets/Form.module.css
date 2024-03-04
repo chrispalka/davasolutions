@@ -2,7 +2,7 @@
   padding-top: 3.25rem;
   padding-bottom: 3.25rem;
   margin-top: 3.125rem;
-  background-color: var(--contrastbackground);
+  background-color: var(--background);
   opacity: 100;
   display: flex;
   justify-content: center;

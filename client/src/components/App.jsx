@@ -52,8 +52,8 @@ const App = () => {
         </div>
         <Hero isPageLoading={isLoading} />
         <Solutions isPageLoading={isLoading} />
-        <Locations isPageLoading={isLoading} />
-        <About isPageLoading={isLoading} />
+        {/* <Locations isPageLoading={isLoading} /> */}
+        {/* <About isPageLoading={isLoading} /> */}
         <Form isPageLoading={isLoading} />
         {/* <footer className={styles.footerSection}>footer text</footer> */}
       </main>

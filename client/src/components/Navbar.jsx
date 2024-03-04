@@ -26,14 +26,14 @@ const Navbar = ({ scrollDirection, top, isPageLoading }) => {
       name: 'Solutions',
       href: '#solutions',
     },
-    {
-      name: 'Locations',
-      href: '#locations',
-    },
-    {
-      name: 'About',
-      href: '#about',
-    },
+    // {
+    //   name: 'Locations',
+    //   href: '#locations',
+    // },
+    // {
+    //   name: 'About',
+    //   href: '#about',
+    // },
     {
       name: 'Contact',
       href: '#contact',
