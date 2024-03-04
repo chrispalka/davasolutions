@@ -1,10 +1,26 @@
+.sectionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 100;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.sectionWrapperFadeIn {
+  opacity: 0;
+}
 .heroContainer {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding-top: 12rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  margin-bottom: 6.125rem;
 }
 
 .flipContainer {
@@ -51,24 +67,6 @@
   font-family: 'Alegreya Sans';
 }
 
-.sectionWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 12rem;
-  margin-bottom: 6.125rem;
-  opacity: 100;
-
-  -webkit-transition: all ease 1s;
-  -moz-transition: all ease 1s;
-  transition: all ease 1s;
-}
-
-.sectionWrapperFadeIn {
-  opacity: 0;
-}
-
 @keyframes show {
   0%,
   100% {
@@ -96,7 +94,8 @@
 
 @media (min-width: 48rem) and (max-width: 64rem) {
   .heroContainer {
-    padding: 2rem calc(50% - 600px);
+    padding-top: 12rem;
+    padding: 12rem calc(50% - 600px) 0;
   }
 }
 
@@ -104,7 +103,8 @@
 
 @media (min-width: 64.0625rem) and (max-width: 80rem) {
   .heroContainer {
-    padding: 2rem calc(50% - 600px);
+    padding-top: 12rem;
+    padding: 12rem calc(50% - 600px) 0;
   }
 }
 
@@ -112,6 +112,7 @@
 
 @media (min-width: 80.0625rem) {
   .heroContainer {
-    padding: 2rem calc(50% - 600px);
+    padding-top: 12rem;
+    padding: 12rem calc(50% - 600px) 0;
   }
 }

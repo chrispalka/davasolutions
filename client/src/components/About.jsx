@@ -5,6 +5,7 @@ import vendingUpClose from '../assets/images/vending_up_close.jpeg';
 import comboVending from '../assets/images/combo-vending.png';
 import vendingWomanMultiple from '../assets/images/vending-woman-multiple.jpg';
 import vendingPeople from '../assets/images/vending-people.jpeg';
+import robAaron from '../assets/images/RobAaron.jpg';
 
 const imgArray = [
   vendingUpClose,
@@ -23,20 +24,27 @@ const About = ({ isPageLoading }) => (
     }
   >
     <div className={styles.wrapper}>
-      <div className={styles.customShapeDividerTop}>
-        <svg
-          data-name='Layer 1'
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 1200 120'
-          preserveAspectRatio='none'
-        >
-          <path
-            d='M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z'
-            className={styles.shapeFfill}
-          ></path>
-        </svg>
+      <h1>Meet Your Experts</h1>
+      <div className={styles.aboutContainer}>
+        <div className={styles.imageContainer}>
+          {/* <img alt='' src={robAaron} /> */}
+        </div>
+        <div className={styles.contentContainer}>
+          <p>
+            Founded three years ago, our vending machine business is the
+            culmination of our passion for providing convenient and delicious
+            snacks to our community. With a focus on quality, variety, and
+            exceptional customer service, we're dedicated to keeping people
+            fueled and satisfied throughout their day. As business partners, we
+            strive to continuously innovate and improve, ensuring that our
+            vending machines offer a diverse selection of snacks and beverages
+            to meet the needs of our customers. From healthy options to
+            indulgent treats, we're committed to delivering a positive vending
+            experience that keeps our clients coming back for more.
+          </p>
+        </div>
       </div>
-      <Carousel
+      {/* <Carousel
         autoPlay
         showThumbs={false}
         showStatus={false}
@@ -52,7 +60,7 @@ const About = ({ isPageLoading }) => (
             />
           </div>
         ))}
-      </Carousel>
+      </Carousel> */}
     </div>
   </section>
 );

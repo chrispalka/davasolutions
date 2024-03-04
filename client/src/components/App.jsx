@@ -5,6 +5,7 @@ import {
   Navbar,
   Form,
   Solutions,
+  Locations,
   useScroll,
   About,
   Hero,
@@ -51,6 +52,7 @@ const App = () => {
         </div>
         <Hero isPageLoading={isLoading} />
         <Solutions isPageLoading={isLoading} />
+        <Locations isPageLoading={isLoading} />
         <About isPageLoading={isLoading} />
         <Form isPageLoading={isLoading} />
         {/* <footer className={styles.footerSection}>footer text</footer> */}

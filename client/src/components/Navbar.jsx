@@ -19,6 +19,10 @@ const Navbar = ({ scrollDirection, top, isPageLoading }) => {
       href: '#solutions',
     },
     {
+      name: 'Locations',
+      href: '#locations',
+    },
+    {
       name: 'About',
       href: '#about',
     },

@@ -1,0 +1,117 @@
+.sectionWrapper {
+  position: relative;
+  opacity: 100;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.sectionWrapperFadeIn {
+  opacity: 0;
+}
+
+.wrapper {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customShapeDividerTop {
+  display: none;
+}
+
+/* TABLET */
+
+@media (min-width: 48rem) and (max-width: 64rem) {
+  .wrapper {
+    padding-top: 6rem;
+    height: 50rem;
+  }
+  .customShapeDividerTop {
+    display: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .customShapeDividerTop svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+  }
+
+  .customShapeDividerTop .shapeFfill {
+    fill: var(--contrastbackground);
+  }
+}
+
+/* LAPTOP DESKTOP */
+
+@media (min-width: 64.0625rem) and (max-width: 80rem) {
+  .wrapper {
+    padding-top: 6rem;
+    height: 50rem;
+  }
+  .customShapeDividerTop {
+    display: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .customShapeDividerTop svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+  }
+
+  .customShapeDividerTop .shapeFfill {
+    fill: var(--contrastbackground);
+  }
+}
+
+/* LARGE SCREENS */
+
+@media (min-width: 80.0625rem) {
+  .wrapper {
+    padding-top: 6rem;
+    height: 50rem;
+  }
+  .customShapeDividerTop {
+    display: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .customShapeDividerTop svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+  }
+
+  .customShapeDividerTop .shapeFfill {
+    fill: var(--contrastbackground);
+  }
+}
